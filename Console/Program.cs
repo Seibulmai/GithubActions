@@ -86,9 +86,10 @@ namespace GithubActionsLab
         {
             double i = double.Parse(y);
             double n = double.Parse(x);
-            double sol = 0;
-            while (i > 0) {
-                sol += n * n;
+            double sol = n;
+            while (i > 1) {
+                sol += sol * n;
+                i -= 1;
             };
             return sol;
         }
